@@ -1,0 +1,60 @@
+@startuml class_diagram
+
+class small_DB extends USER{
+    + USER[] USERLIST
+
+}
+
+class USER {
+    + long Serial_Number 
+    - String name
+    - int age
+    - char sex
+    - long wage
+    - consumption_item[] consumption_itme_Array
+
+    + string getName()
+    + long getAge()
+    + string getWage()
+    + consumption_item[] getCosumptions()
+
+    + string setName()
+    + long setAge()
+    + string setWage()
+    + consumption_item[] setCosumptions()
+    + modifyUserData()
+}
+
+class consumption_item {
+    - String name
+    - int price
+    - int Stock
+    - int installment_time 
+    - string payment_place
+    - string category
+
+    + String getName()
+    + int getPrice()
+    + int getStock()
+    + int getInstallment_time() 
+    + string getPayment_place()
+    + string getCategory()
+
+    + setName()
+    + setPrice()
+    + setStock()
+    + setInstallment_time() 
+    + setPayment_place()
+    + setCategory()
+
+}
+
+
+interface manageUser
+{
+    + addUser()
+    + removeUser()
+    + modifyUser()
+} 
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml enduser
+skinparam sequenceMessageAlign left
+actor USER as user #Blue
+
+Box System #LightGrey
+participant widget
+Control job
+end box
+
+user --> job
+
+@enduml
+
+
