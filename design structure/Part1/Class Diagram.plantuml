@@ -25,6 +25,7 @@ class USER {
     + modifyUserData()
 }
 
+
 class consumption_item {
     - String name
     - int price
